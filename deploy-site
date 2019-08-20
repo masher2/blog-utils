@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+# Build the site, copy the files to the deploy repo, commits and pushes to
+# remote automatically.
+
+SITE_BUILD_DIR='public/'
+SITE_DEPLOY_DIR="$HOME/Work/Jesus/masher2.github.io/"
+
+echo "Building site"
+Rscript -e 'blogdown::build_site()' || exit 1
+
+echo "Copying all files to the deploy repo"
+cp -r $SITE_BUILD_DIR/* $SITE_DEPLOY_DIR || exit 1
+
+echo "Deploying site"
+cd $SITE_DEPLOY_DIR
+git add . && git commit -m "Update" && git push && exit 0
+
+exit 1
