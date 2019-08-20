@@ -7,6 +7,7 @@ I don't really use RStudio IDE so I found easier to make some scripts to automat
 
 # Contents
 
+* `serve-site`: Wrapper around `blogdown::serve_site()`.
 * `deploy-site`: Call `blogdown::build_site()`, copy the files in `public/` into the deploy repo, commit and push to remote.
 
 
