@@ -1,0 +1,7 @@
+#! /usr/bin/sh
+
+[ -f config.toml ] || exit 1
+
+post=$(find content/ -iname '*.*md' | fzf --height=10 --reverse --color=light)
+
+[ -z $post ] && exit 1 || nvim "$post"

@@ -3,7 +3,7 @@
 # remote automatically.
 
 SITE_BUILD_DIR='public/'
-SITE_DEPLOY_DIR="$HOME/Work/Jesus/masher2.github.io/"
+SITE_DEPLOY_DIR="$HOME/work/Jesus/masher2.github.io/"
 
 echo "Building site"
 Rscript -e 'blogdown::build_site()' || exit 1
