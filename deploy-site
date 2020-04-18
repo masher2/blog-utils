@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/sh
 # Build the site, copy the files to the deploy repo, commits and pushes to
 # remote automatically.
 
