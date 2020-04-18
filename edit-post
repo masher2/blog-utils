@@ -2,6 +2,6 @@
 
 [ -f config.toml ] || exit 1
 
-post=$(find content/ -iname '*.*md' | fzf --height=10 --reverse --color=light)
+post=$(find content/ -iname '*.*md' | sort -r | fzf --height=10 --reverse --color=light --query=${1:-''})
 
 [ -z $post ] && exit 1 || nvim "$post"
