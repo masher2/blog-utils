@@ -6,7 +6,7 @@ SITE_BUILD_DIR='public/'
 SITE_DEPLOY_DIR="$HOME/work/Jesus/masher2.github.io/"
 
 echo "Building site"
-Rscript -e 'blogdown::build_site()' || exit 1
+Rscript -e 'blogdown::hugo_build()' || exit 1
 
 echo "Copying all files to the deploy repo"
 cp -r $SITE_BUILD_DIR/* $SITE_DEPLOY_DIR || exit 1
